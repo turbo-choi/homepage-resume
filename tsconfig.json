@@ -1,3 +1,21 @@
 {
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "vue": ["./node_modules/vue"],
+      "#imports": ["./.nuxt/imports.d.ts"],
+      "#build/*": ["./.nuxt/*"]
+    }
+  }
 }

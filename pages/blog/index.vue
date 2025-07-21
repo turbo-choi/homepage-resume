@@ -189,7 +189,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+// import { ref, computed, watch } from 'vue' // 이 줄을 제거
 
 // SEO 메타 태그 설정
 useHead({
@@ -324,7 +324,7 @@ const filteredPosts = computed(() => {
   // 태그 필터링
   if (selectedTags.value.length > 0) {
     posts = posts.filter(post => 
-      selectedTags.value.some(tag => post.tags.includes(tag))
+      selectedTags.value.some((tag: string) => post.tags.includes(tag))
     )
   }
   

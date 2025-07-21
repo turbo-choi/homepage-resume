@@ -266,7 +266,7 @@
 </template>
 
 <script setup lang="ts">
-import { CheckCircle } from 'lucide-vue-next'
+// import { CheckCircle } from 'lucide-vue-next'
 
 // 라우트 파라미터 가져오기
 const route = useRoute()
@@ -401,8 +401,8 @@ const getStatusBadgeClass = (status: string | undefined) => {
 // 프로젝트가 없으면 404 처리
 if (!project.value) {
   throw createError({
-    statusCode: 404,
-    statusMessage: '프로젝트를 찾을 수 없습니다.'
+    status: 404,
+    statusText: '프로젝트를 찾을 수 없습니다.'
   })
 }
 
